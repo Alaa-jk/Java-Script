@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">
+            <h2>Products</h2>
+            <p>Products management system</p>
+        </div>
+        <div class="inputs">
+            <input type="text" id="title" placeholder="title">
+            <div class="price">
+                <input onkeyup="calculateTotalPrice()" type="number" id="price" placeholder="price">
+                <input onkeyup="calculateTotalPrice()" type="number" id="taxes" placeholder="taxes">
+                <input onkeyup="calculateTotalPrice()" type="number" id="ads" placeholder="ads">
+                <input onkeyup="calculateTotalPrice()" type="number" id="discount" placeholder="discount">
+                <small id="total"></small>
+
+            </div>
+            <input type="number" id="count" placeholder="count">
+            <input type="text" id="category" placeholder="category">
+            <input type="date" id="date" placeholder="date">
+            <button id="submit">Creat</button>
+        </div>
+        <div class="outputs">
+            <div class="searchBlock">
+                <input onkeyup="searchDate(this.value)" type="text" id="search" placeholder="Search">
+                <div class="btnSearch">
+                    <button onclick="searchByTitle()" id="searchByTitle">Search By Title</button>
+                    <button onclick="searchByCategory()" id="searchByCategory">Search By Category</button>
+                    <button onclick="searchByDate()" id="searchByDate">Search By Date</button>
+
+                </div>
+                <div id="deleteAll">
+                    
+                </div>
+            </div>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>count</th>
+                    <th>category</th>
+                    <th>date</th>
+                    <th>Action</th>
+                    <th>Action</th>
+                </tr>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <script src="jscript.js" >
+
+    </script>
+</body>
+
+</html>
